@@ -18,7 +18,9 @@ body {
   font-weight: 400;
   height: 100vh;
   color: #333;
-  background-image: linear-gradient(to top left, #368254 0%, #6cc0ba 100%);
+  background-image: url("../img/renato-ramos-puma-npI9qi4S4nM-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
