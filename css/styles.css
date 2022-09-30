@@ -96,6 +96,10 @@ main {
   display: none;
 }
 
+.rolledDisplay{
+  display: block;
+}
+
 .currentLabel {
   text-transform: uppercase;
   margin-bottom: 1rem;
