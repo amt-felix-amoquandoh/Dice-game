@@ -4,7 +4,10 @@ scores = [0,0];
 activeScore = 0;
 playerActive = 1;
 
-
+document.getElementById("player1Score").textContent = "";
+document.getElementById("current-1").textContent = "";
+document.getElementById("player2Score").textContent = "";
+document.getElementById("current-2").textContent = "";
 
 // document.querySelector("#current-" + playerActive).textContent = dice;
 
