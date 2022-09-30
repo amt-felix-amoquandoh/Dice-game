@@ -7,4 +7,4 @@ playerActive = 0;
 dice = Math.floor(Math.random() * 6) + 1;
 
 
-document.querySelector("#current-" + playerActive).textContent = dice;
+document.querySelector("#current- " + playerActive).textContent = dice;
