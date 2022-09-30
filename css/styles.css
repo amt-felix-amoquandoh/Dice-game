@@ -92,6 +92,10 @@ main {
   transition: all 0.75s;
 }
 
+.diceDisplay{
+  display: none;
+}
+
 .currentLabel {
   text-transform: uppercase;
   margin-bottom: 1rem;

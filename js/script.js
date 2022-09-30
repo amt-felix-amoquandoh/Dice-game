@@ -8,3 +8,7 @@ dice = Math.floor(Math.random() * 6) + 1;
 
 
 document.querySelector("#current-" + playerActive).textContent = dice;
+document.querySelector(".dice").classList.add("diceDisplay");
+document.querySelector(".btnRoll").addEventListener("click", function(){
+    
+});
