@@ -12,9 +12,9 @@ playerActive = 1;
 
 document.querySelector(".btnRoll").addEventListener("click", function(){
    // getting a random number
-    let dice = Math.floor(Math.random() * 6) + 1;
+    var dice = Math.floor(Math.random() * 6) + 1;
    //displaying to UI
-   let rolledDice = document.querySelector(".dice");
-   rolledDice.classList.add("rolledDice");
+   var rolledDice = document.querySelector(".dice");
+   rolledDice.classList.add("rolledDisplay");
    rolledDice.src = "dice-" + dice + ".png"
 });
