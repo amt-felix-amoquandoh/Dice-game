@@ -9,7 +9,7 @@ document.getElementById("current-1").textContent = "0";
 document.getElementById("player2Score").textContent = "0";
 document.getElementById("current-2").textContent = "0";
 
-// document.querySelector("#current-" + playerActive).textContent = dice;
+//  = dice;
 
 // document.querySelector(".dice").classList.add("diceDisplay");
 
@@ -20,6 +20,13 @@ function rollDice (){
    var rolledDice = document.querySelector(".dice");
    rolledDice.classList.add("rolledDisplay");
    rolledDice.src = "dice-" + dice + ".png"
+   //displaying the score
+   if(dice !== 1){
+      activeScore += dice
+      document.querySelector("#current-" + playerActive).textContent = activeScore;
+   } else{
+
+   }
 }
 
 document.querySelector(".btnRoll").addEventListener("click", rollDice);
