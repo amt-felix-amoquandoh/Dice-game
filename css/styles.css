@@ -68,7 +68,7 @@ main {
 }
 
 .playerActive {
-  background-color: rgba(245, 149, 149, 0.4);
+  background-color: rgb(106, 172, 41);
 }
 
 .playerActive .name {
@@ -83,7 +83,7 @@ main {
   opacity: 1;
 }
 
-.current {
+.currentPlayer {
   background-color: #c7365f;
   opacity: 0.8;
   border-radius: 9px;
@@ -107,7 +107,7 @@ main {
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-size: 1.9rem;
-  color: teal;
+  color: rgb(48, 220, 220);
   font-weight: bolder;
 }
 
