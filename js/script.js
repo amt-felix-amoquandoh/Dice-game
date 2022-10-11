@@ -33,9 +33,14 @@ function rollDice (){
        playerActive === 1 ? playerActive = 2 : playerActive = 1;
        document.getElementById("current-1").textContent = "0";
        document.getElementById("current-2").textContent = "0"; 
-       document.querySelector(".player1").classList.remove("playerActive");
-       document.querySelector(".player2").classList.add("playerActive");
+       document.querySelector(".player1").classList.toggle("playerActive");
+       document.querySelector(".player2").classList.toggle("playerActive");
    }
 }
 
+function holdDice (){
+   
+}
+
 document.querySelector(".btnRoll").addEventListener("click", rollDice);
+document.querySelector(".btnHold").addEventListener("click", holdDice);
