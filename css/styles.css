@@ -17,10 +17,10 @@ body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   height: 100vh;
-  color: #333;
-  background-image: url("../img/renato-ramos-puma-npI9qi4S4nM-unsplash.jpg");
+  background-image: url("../img/josh-appel-5Ne0K_Zro2w-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
