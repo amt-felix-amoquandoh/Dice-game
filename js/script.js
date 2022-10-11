@@ -25,7 +25,10 @@ function rollDice (){
       activeScore += dice
       document.querySelector("#current-" + playerActive).textContent = activeScore;
    } else{
-
+      //go to player 2
+       playerActive === 1 ? playerActive = 2 : playerActive = 1;
+       document.getElementById("current-1").textContent = "0";
+       document.getElementById("current-2").textContent = "0";       
    }
 }
 
