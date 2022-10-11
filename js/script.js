@@ -39,7 +39,11 @@ function rollDice (){
 }
 
 function holdDice (){
-   
+   //add current to main score
+   scores[playerActive] += activeScore;
+   //display in ui
+   //check winner
+
 }
 
 document.querySelector(".btnRoll").addEventListener("click", rollDice);
