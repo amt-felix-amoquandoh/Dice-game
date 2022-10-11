@@ -1,7 +1,7 @@
 let p1CurrentScore = document.getElementById("current-1");
 let p2CurrentScore = document.getElementById("current-2");
-let p1MainScore = document.getElementById("player1Score");
-let p2MianScore = document.getElementById("player2Score");
+let p1MainScore = document.getElementById("score-1");
+let p2MainScore = document.getElementById("score-2");
 
 
 var scores, activeScore, playerActive, dice;
@@ -10,12 +10,23 @@ scores = [0,0];
 activeScore = 0;
 playerActive = 1;
 
-p1MainScore.textContent = "0";
-p1CurrentScore.textContent = "0";
-p2MianScore.textContent = "0";
-p2CurrentScore = "0";
+p1MainScore.textContent = 0;
+p1CurrentScore.textContent = 0;
+p2MainScore.textContent = 0;
+p2CurrentScore = 0;
 
-// document.querySelector(".dice").classList.add("diceDisplay");
+// next player function
+function nextPlayer (){
+   playerActive === 1 ? playerActive = 2 : playerActive = 1;
+   activeScore = 0;
+       document.getElementById("current-1").textContent = "0";
+       document.getElementById("current-2").textContent = "0"; 
+       document.querySelector(".player1").classList.toggle("playerActive");
+       document.querySelector(".player2").classList.toggle("playerActive");
+
+       document.querySelector(".dice").classList.toggle("rolledDisplay")
+}
+
 
 function rollDice (){
    // getting a random number
@@ -30,18 +41,16 @@ function rollDice (){
       document.querySelector("#current-" + playerActive).textContent = activeScore;
    } else{
       //go to player 2
-       playerActive === 1 ? playerActive = 2 : playerActive = 1;
-       document.getElementById("current-1").textContent = "0";
-       document.getElementById("current-2").textContent = "0"; 
-       document.querySelector(".player1").classList.toggle("playerActive");
-       document.querySelector(".player2").classList.toggle("playerActive");
+       nextPlayer();
    }
 }
 
 function holdDice (){
    //add current to main score
-   scores[playerActive] += activeScore;
+   scores[playerActive] = scores[playerActive] + activeScore;
    //display in ui
+   document.querySelector("#score-" + playerActive).textContent = scores[playerActive];
+   nextPlayer();
    //check winner
 
 }
