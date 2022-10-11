@@ -68,7 +68,7 @@ main {
 }
 
 .playerActive {
-  background-color: rgb(106, 172, 41);
+  background-color: rgb(55, 217, 139);
 }
 
 .playerActive .name {
@@ -84,7 +84,7 @@ main {
 }
 
 .currentPlayer {
-  background-color: #c7365f;
+  background-color: #DB4137;
   opacity: 0.8;
   border-radius: 9px;
   color: #fff;
