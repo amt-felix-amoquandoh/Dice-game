@@ -70,11 +70,13 @@ main {
 .playerActive {
   background-color: rgba(255, 255, 255, 0.4);
 }
+
 .playerActive .name {
   font-weight: 700;
 }
+
 .playerActive .score {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .playerActive .current {
@@ -90,6 +92,7 @@ main {
   padding: 2rem;
   text-align: center;
   transition: all 0.75s;
+  font-weight: bolder;
 }
 
 .diceDisplay{
@@ -103,13 +106,15 @@ main {
 .currentLabel {
   text-transform: uppercase;
   margin-bottom: 1rem;
-  font-size: 1.7rem;
-  color: #ddd;
+  font-size: 1.9rem;
+  color: teal;
+  font-weight: bolder;
 }
 
 .currentScore {
   font-size: 3.5rem;
   text-align: center;
+  font-weight: bolder;
 }
 
 /* ABSOLUTE POSITIONED ELEMENTS */
