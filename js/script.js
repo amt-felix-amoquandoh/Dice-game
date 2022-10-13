@@ -15,8 +15,8 @@ function nextPlayer (){
    activeScore = 0;
        document.getElementById("current-1").textContent = "0";
        document.getElementById("current-2").textContent = "0"; 
-       document.querySelector(".player1").classList.toggle("playerActive");
-       document.querySelector(".player2").classList.toggle("playerActive");
+       document.querySelector(".player-1").classList.toggle("playerActive");
+       document.querySelector(".player-2").classList.toggle("playerActive");
 
        document.querySelector(".dice").classList.toggle("rolledDisplay")
 }
