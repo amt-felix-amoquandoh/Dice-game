@@ -1,19 +1,13 @@
-let p1CurrentScore = document.getElementById("current-1");
-let p2CurrentScore = document.getElementById("current-2");
-let p1MainScore = document.getElementById("score-1");
-let p2MainScore = document.getElementById("score-2");
-
-
 var scores, activeScore, playerActive, dice;
 
 scores = [0,0];
 activeScore = 0;
 playerActive = 1;
 
-p1MainScore.textContent = 0;
-p1CurrentScore.textContent = 0;
-p2MainScore.textContent = 0;
-p2CurrentScore = 0;
+document.getElementById("score-1").textContent = 0;
+document.getElementById("current-1").textContent = 0;
+document.getElementById("score-2").textContent = 0;
+document.getElementById("current-2").textContent = 0;
 
 // next player function
 function nextPlayer (){
