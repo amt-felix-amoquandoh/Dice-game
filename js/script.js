@@ -19,12 +19,14 @@ p2CurrentScore = 0;
 function nextPlayer (){
    playerActive === 1 ? playerActive = 2 : playerActive = 1;
    activeScore = 0;
+   
        document.getElementById("current-1").textContent = "0";
        document.getElementById("current-2").textContent = "0"; 
        document.querySelector(".player1").classList.toggle("playerActive");
        document.querySelector(".player2").classList.toggle("playerActive");
 
-       document.querySelector(".dice").classList.toggle("rolledDisplay")
+       document.querySelector(".dice").style.display = "none";
+       
 }
 
 
@@ -32,12 +34,13 @@ function rollDice (){
    // getting a random number
     var dice = Math.floor(Math.random() * 6) + 1;
    //displaying to UI
+   document.querySelector(".dice").style.display = "block";
    var rolledDice = document.querySelector(".dice");
    rolledDice.classList.add("rolledDisplay");
    rolledDice.src = "dice-" + dice + ".png"
    //displaying the score
    if(dice !== 1){
-      activeScore += dice
+      activeScore = activeScore + dice
       document.querySelector("#current-" + playerActive).textContent = activeScore;
    } else{
       //go to player 2
@@ -49,7 +52,7 @@ function holdDice (){
    //add current to main score
    scores[playerActive] = scores[playerActive] + activeScore;
    //display in ui
-   document.querySelector("#score-" + playerActive).textContent = scores[playerActive];
+   document.querySelector("#score-" + playerActive).textContent = scores[playerActive, playerActive];
    nextPlayer();
    //check winner
 
