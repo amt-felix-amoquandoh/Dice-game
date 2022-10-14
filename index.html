@@ -21,7 +21,7 @@
 
   <body>
     <main>
-      <section class="player player1 playerActive">
+      <section class="player player-1 playerActive">
         <h2 class="name" id="name1">Player 1</h2>
         <p class="score" id="score-1">43</p>
         <div class="currentPlayer">
@@ -29,9 +29,10 @@
           <p class="currentScore" id="current-1">0</p>
         </div>
       </section>
-      <section class="player player2">
+
+      <section class="player player-2">
         <h2 class="name" id="name2">Player 2</h2>
-        <p class="score" id="score-2">24</p>
+        <p class="score" id="score-2"></p>
         <div class="currentPlayer">
           <p class="currentLabel">Current score</p>
           <p class="currentScore" id="current-2">0</p>
@@ -43,22 +44,19 @@
       <button class="btn newGameBtn">
         <img src="./img/synchronize.png" height="40px" width="40px" /><b
           style="color: green"
-        >
-          New game</b
+          >New game</b
         >
       </button>
       <button class="btn btnRoll">
         <img src="./img/dice.png" height="38px" width="38px" /><b
           style="color: blue"
-        >
-          Roll dice</b
+          >Roll dice</b
         >
       </button>
       <button class="btn btnHold">
         <img src="./img/hand.png" height="38px" width="38px" /><b
           style="color: red"
-        >
-          Hold</b
+          >Hold</b
         >
       </button>
     </main>
