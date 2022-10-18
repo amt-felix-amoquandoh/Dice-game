@@ -1,23 +1,25 @@
 var scores, activeScore, playerActive, dice;
 
-scores = [0,0];
+scores = {score1: 0,
+   score2: 0
+};
 activeScore = 0;
 playerActive = 1;
 
-document.getElementById("score-1").textContent = 0;
-document.getElementById("current-1").textContent = 0;
-document.getElementById("score-2").textContent = 0;
-document.getElementById("current-2").textContent = 0;
+document.getElementById("score1").textContent = 0;
+document.getElementById("current1").textContent = 0;
+document.getElementById("score2").textContent = 0;
+document.getElementById("current2").textContent = 0;
 
 // next player function
 function nextPlayer (){
    playerActive === 1 ? playerActive = 2 : playerActive = 1;
    activeScore = 0;
    
-       document.getElementById("current-1").textContent = "0";
-       document.getElementById("current-2").textContent = "0"; 
-       document.querySelector(".player-1").classList.toggle("playerActive");
-       document.querySelector(".player-2").classList.toggle("playerActive");
+       document.getElementById("current1").textContent = "0";
+       document.getElementById("current2").textContent = "0"; 
+       document.querySelector(".player1").classList.toggle("playerActive");
+       document.querySelector(".player2").classList.toggle("playerActive");
 
        document.querySelector(".dice").style.display = "none";
        
@@ -35,7 +37,7 @@ function rollDice (){
    //displaying the score
    if(dice !== 1){
       activeScore = activeScore + dice
-      document.querySelector("#current-" + playerActive).textContent = activeScore;
+      document.querySelector("#current" + playerActive).textContent = activeScore;
    } else{
       //go to player 2
        nextPlayer();
@@ -44,9 +46,9 @@ function rollDice (){
 
 function holdDice (){
    //add current to main score
-   scores[playerActive] = scores[playerActive] + activeScore;
+   scores["score" + playerActive] += activeScore;
    //display in ui
-   document.querySelector("#score-" + playerActive).textContent = scores[playerActive, playerActive];
+   document.querySelector("#score" + playerActive).textContent = scores["score" + playerActive];
    nextPlayer();
    //check winner
 
