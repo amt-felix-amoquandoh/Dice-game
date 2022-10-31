@@ -1,4 +1,4 @@
-var scores, activeScore, playerActive, dice;
+var scores, activeScore, playerActive, dice, isGameBeingPlayed;
 
 scores = {score1: 0,
    score2: 0
@@ -27,20 +27,22 @@ function nextPlayer (){
 
 
 function rollDice (){
-   // getting a random number
+   if (isGameBeingPlayed){
+      // getting a random number
     var dice = Math.floor(Math.random() * 6) + 1;
-   //displaying to UI
-   document.querySelector(".dice").style.display = "block";
-   var rolledDice = document.querySelector(".dice");
-   rolledDice.classList.add("rolledDisplay");
-   rolledDice.src = "dice-" + dice + ".png"
-   //displaying the score
-   if(dice !== 1){
-      activeScore = activeScore + dice
-      document.querySelector("#current" + playerActive).textContent = activeScore;
-   } else{
-      //go to player 2
-       nextPlayer();
+    //displaying to UI
+    document.querySelector(".dice").style.display = "block";
+    var rolledDice = document.querySelector(".dice");
+    rolledDice.classList.add("rolledDisplay");
+    rolledDice.src = "dice-" + dice + ".png"
+    //displaying the score
+    if(dice !== 1){
+       activeScore = activeScore + dice
+       document.querySelector("#current" + playerActive).textContent = activeScore;
+    } else{
+       //go to player 2
+        nextPlayer();
+    }
    }
 }
 
@@ -55,6 +57,7 @@ function holdDice (){
       document.querySelector(".dice").style.display = "none";
       document.querySelector(".player" + playerActive).classList.add("playerWinner");
       document.querySelector(".player" + playerActive ).classList.remove("playerActive");
+      isGameBeingPlayed = false;
    } else {
       nextPlayer();
    }
@@ -65,6 +68,7 @@ function startNewGame(){
    scores[0,0];
    playerActive = 0;
    activeScore = 0;
+   isGameBeingPlayed = true;
    document.querySelector(".dice").style.display = "none";
    document.getElementById("score1").textContent = 0;
  document.getElementById("current1").textContent = 0;
