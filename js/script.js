@@ -51,6 +51,11 @@ function holdDice (){
    document.querySelector("#score" + playerActive).textContent = scores["score" + playerActive];
    nextPlayer();
    //check winner
+   if (scores[playerActive] >= 10) {
+      document.querySelector("name" + playerActive).textContent = "You Won!!"
+   } else {
+      
+   }
 
 }
 
