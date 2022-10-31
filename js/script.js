@@ -54,11 +54,22 @@ function holdDice (){
    if (scores["score" + playerActive] = 10) {
       document.querySelector("#name" + playerActive).textContent = "You Won!!"
       document.querySelector(".dice").classList.add("rolledDisplay");
+      document.querySelector(".player" + playerActive + "-panel").classList.add("winner");
+      document.querySelector(".player" + playerActive + "-nvanel").classList.remove("playerActive");
    } else {
-      nextPlayer();
+      nextPlayer(); 
    }
 
 }
 
+function startNewGame(){
+  scores[0,0];
+  playerActive = 0;
+  activeScore = 0;
+
+}
+
+
+document.querySelector(".newGameBtn").addEventListener("click", startNewGame);
 document.querySelector(".btnRoll").addEventListener("click", rollDice);
 document.querySelector(".btnHold").addEventListener("click", holdDice);
