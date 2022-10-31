@@ -51,8 +51,9 @@ function holdDice (){
    document.querySelector("#score" + playerActive).textContent = scores["score" + playerActive];
    nextPlayer();
    //check winner
-   if (scores[playerActive] = 10) {
+   if (scores["score" + playerActive] = 10) {
       document.querySelector("#name" + playerActive).textContent = "You Won!!"
+      document.querySelector(".dice").classList.add("rolledDisplay");
    } else {
       nextPlayer();
    }
