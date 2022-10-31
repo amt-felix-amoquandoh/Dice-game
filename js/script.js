@@ -50,11 +50,11 @@ function holdDice (){
    //display in ui
    document.querySelector("#score" + playerActive).textContent = scores["score" + playerActive];
    //check winner
-   if (scores["score" + playerActive] >= 100) {
+   if (scores["score" + playerActive] >= 10) {
       document.querySelector("#name" + playerActive).textContent = "You Won!!"
       document.querySelector(".dice").style.display = "none";
-      document.querySelector(".player-" + playerActive + "-panel").classList.add("playerWinner");
-      document.querySelector(".player-" + playerActive + "-panel").classList.remove("playerActive");
+      document.querySelector(".player" + playerActive).classList.add("playerWinner");
+      document.querySelector(".player" + playerActive ).classList.remove("playerActive");
    } else {
       nextPlayer();
    }
@@ -70,6 +70,13 @@ function startNewGame(){
  document.getElementById("current1").textContent = 0;
  document.getElementById("score2").textContent = 0;
  document.getElementById("current2").textContent = 0;
+ document.getElementById("name1").textContent = "Player 1";
+ document.getElementById("name2").textContent = "Player 2";
+ document.querySelector(".player1").classList.remove("playerWinner");
+ document.querySelector(".player2").classList.remove("playerWinner");
+ document.querySelector(".player1").classList.remove("playerActive");
+ document.querySelector(".player2").classList.remove("playerActive");
+ document.querySelector(".player1").classList.add("playerActive");
  
  }
  
