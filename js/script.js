@@ -11,7 +11,7 @@ document.getElementById("current1").textContent = 0;
 document.getElementById("score2").textContent = 0;
 document.getElementById("current2").textContent = 0;
 
-// next player function
+// next player function below
 function nextPlayer (){
    playerActive === 1 ? playerActive = 2 : playerActive = 1;
    activeScore = 0;
